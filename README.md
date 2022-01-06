@@ -1,5 +1,7 @@
 # tree
 
+[![Go Reference](https://pkg.go.dev/badge/source.toby3d.me/toby3d/tree.svg)](https://pkg.go.dev/source.toby3d.me/toby3d/tree)
+
 The fast and simple [Tree Notation](https://faq.treenotation.org/spec/) parser.
 Clean and unfiltered Go with single memory allocation and without any 3rd party
 dependencies.
