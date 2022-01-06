@@ -1,0 +1,6 @@
+name mypackage
+version 2.1.1
+description A package
+repository
+ type git
+ url git://github.com/username/mypackage
