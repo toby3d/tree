@@ -11,4 +11,4 @@ heads that can move not just on the x axis but on the y axis as well.
 Tree Notation is a middle ground that utilitizes ideas from the two dimensional
 language world using present day technology.
 */
-package tree
+package tree // import "source.toby3d.me/toby3d/tree"
