@@ -6,25 +6,30 @@ import (
 	"strings"
 )
 
-// Node represent a single data structure.
-type Node struct {
-	Parent   *Node
-	Children []*Node
-	Value    string
-}
+type (
+	// Node represent a single data structure.
+	Node struct {
+		Parent   *Node
+		Children []*Node
+		Value    string
+	}
+
+	// Delim is a delimiter between words (cells) in nodes (lines).
+	Delim rune
+)
 
 const (
 	// nodeBreakSymbol delimits nodes (lines).
 	nodeBreakSymbol rune = '\n'
 
 	// wordBreakSymbol delimits words (cells).
-	wordBreakSymbol rune = ' '
+	wordBreakSymbol Delim = ' '
 
 	// edgeSymbol is used to indicate the parent/child relationship between
 	// nodes.
 	//
 	// TODO(toby3d): allow clients to change this to '\t' for example.
-	edgeSymbol rune = wordBreakSymbol
+	edgeSymbol rune = ' '
 )
 
 // Parse parses the data into a Tree Notation nodes.
@@ -93,6 +98,10 @@ func (n Node) GoString() (result string) {
 	}
 
 	return result
+}
+
+func (d Delim) String() string {
+	return string(d)
 }
 
 // lenIndent count egdeSymbol prefixes in line.
